@@ -1,3 +1,24 @@
+# How to run the project
+
+You will need php 7.1.x and composer 1.9.x to run the project.
+
+`git clone https://github.com/edn9/favbooks`
+
+After you clone, create a <i>.env</i> file based of <i>.env.example</i>, configure your database, generate key with:
+
+`php artisan key:generate`
+
+Then run the project with:
+
+`php artisan serve`
+
+Video sample:
+
+
+![Favbooks video example](https://i.imgur.com/9ZFToEA.jpg](https://www.youtube.com/watch?v=CLikuBqQLQw "Favbooks Video Example")
+
+---
+
 # PHP Artisan Cheatsheet
 
 ### Here's a list of useful commands to use. This is just a simple sketch of what to do if its your first time trying laravel, or if you forgot something.
