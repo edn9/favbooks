@@ -1,6 +1,6 @@
 # How to run the project
 
-You will need php 7.1.x and composer 1.9.x to run the project.
+You will need php 7.1.x and composer 1.9.x to run the project. Dont forget to use the commands `composer install` and `npm i --save`.
 
 `git clone https://github.com/edn9/favbooks`
 
