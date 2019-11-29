@@ -48,6 +48,8 @@ First, when you create a new project, you need to <a href="https://laravel.com/d
 
 If you working with seed, dont forget to check the <i>database/seeds/DatabaseSeeder.php</i> file, you need to tell what you gonna run to 'feed' the DB.
 
+`php artisan make:seeder UsersTableSeeder`
+
 Generating Migrations table:
 
 `php artisan make:migration create_users_table`
