@@ -14,7 +14,7 @@ Then run the project with:
 
 Video sample:
 
-[![Watch the video](ttps://i.imgur.com/9ZFToEA.jpg)](https://www.youtube.com/watch?v=CLikuBqQLQw)
+[![Watch the video](https://i.imgur.com/9ZFToEA.jpg)](https://www.youtube.com/watch?v=CLikuBqQLQw)
 
 ---
 
