@@ -42,6 +42,7 @@ class BookController extends Controller
             'title' => 'required',
             'author' => 'required',
             'pic' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+            'rating' => 'required'
         ]);
 
         $picName = 'storage/uploads/' . time() . '.' . request()->pic->getClientOriginalExtension();
@@ -62,6 +63,16 @@ class BookController extends Controller
         ]);
         $book->save();
         return redirect('/books')->with('success', 'Book saved!');
+    }
+
+    public function downloadImage($id)
+    {
+        $img = Books::where('id', $id)->firstOrFail();
+
+        $path = public_path() . '/' . $img->pic;
+
+        return response()->download($path, $img
+            ->original_filename, ['Content-Type' => $img->mime]);
     }
 
     /**

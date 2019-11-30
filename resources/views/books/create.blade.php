@@ -5,7 +5,7 @@
     <div class="col-sm-8 offset-sm-2">
         <h1 class="display-3">Add a book</h1>
         <form method="get" action="/books">
-            <button style="margin: 19px;" type="submit" class="btn btn-primary-outline">Voltar</button>
+            <button style="margin: 19px;" type="submit" class="btn btn-light">Voltar</button>
         </form>
         <div>
             @if ($errors->any())
@@ -51,8 +51,9 @@
 
                 <div class="form-group">
                     <label for="resume">Resume:</label>
-                    <input type="text" class="form-control" name="resume" />
+                    <textarea class="form-control" name="resume" rows="3"></textarea>
                 </div>
+
                 <div class="form-group">
                     <label for="publisher">Publisher:</label>
                     <input type="text" class="form-control" name="publisher" />
@@ -61,10 +62,18 @@
                     <label for="pages">Pages:</label>
                     <input type="text" class="form-control" name="pages" />
                 </div>
+
                 <div class="form-group">
                     <label for="rating">Rating:</label>
-                    <input type="text" class="form-control" name="rating" placeholder="1 to 5" />
+                    <select name="rating" class="form-control">
+                        <option value="1">One</option>
+                        <option value="2">Two</option>
+                        <option value="3">Three</option>
+                        <option value="4">Four</option>
+                        <option value="5">Five</option>
+                    </select>
                 </div>
+
                 <button type="submit" class="btn btn-primary-outline">Add book</button>
             </form>
         </div>

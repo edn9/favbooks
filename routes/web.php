@@ -17,6 +17,9 @@ Route::get('/', function () {
 
 Route::resource('books', 'BookController');
 
+Route::get('books/save/{id}', ['as' => 'books.download', 'uses' => 'BookController@downloadImage']);
+
+
 /*
 Using the resource() static method of Route, you can create multiple routes to expose multiple actions on the resource.
 GET/contacts, mapped to the index() method,

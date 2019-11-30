@@ -4,7 +4,7 @@
     <div class="col-sm-8 offset-sm-2">
         <h1 class="display-6">Editar {{$books->title}}</h1>
         <form method="get" action="/books">
-            <button style="margin: 19px;" type="submit" class="btn btn-primary-outline">Voltar</button>
+            <button style="margin: 19px;" type="submit" class="btn btn-light">Voltar</button>
         </form>
         @if ($errors->any())
         <div class="alert alert-danger">
@@ -51,8 +51,9 @@
 
             <div class="form-group">
                 <label for="resume">Resume:</label>
-                <input type="text" class="form-control" name="resume" value="{{ $books->resume }}" />
+                <textarea class="form-control" name="resume" id="resume" rows="3">{{ $books->resume }}</textarea>
             </div>
+
             <div class="form-group">
                 <label for="publisher">Publisher:</label>
                 <input type="text" class="form-control" name="publisher" value="{{ $books->publisher }}" />
@@ -61,13 +62,20 @@
                 <label for="pages">Pages:</label>
                 <input type="text" class="form-control" name="pages" value="{{ $books->pages }}" />
             </div>
+
             <div class="form-group">
                 <label for="rating">Rating:</label>
-                <input type="text" class="form-control" name="rating" value="{{ $books->rating }}" />
+                <select name="rating" value="{{ $books->rating }}" class="form-control">
+                    <option value="1">One</option>
+                    <option value="2">Two</option>
+                    <option value="3">Three</option>
+                    <option value="4">Four</option>
+                    <option value="5">Five</option>
+                </select>
             </div>
+
             <button type="submit" class="btn btn-primary">Update</button>
         </form>
-
     </div>
 </div>
 @endsection
