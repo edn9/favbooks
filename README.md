@@ -1,3 +1,23 @@
+# How to run the project
+
+You will need php 7.1.x and composer 1.9.x (and a database, I'm using mysql/phpmyadmin/apache) to run the project. Dont forget to use the commands `composer install` and `npm i --save`.
+
+`git clone https://github.com/edn9/favbooks`
+
+After you clone, create a <i>.env</i> file based of <i>.env.example</i>, configure your database, generate key with:
+
+`php artisan key:generate`
+
+Then run the project with:
+
+`php artisan serve`
+
+Video sample:
+
+[![Watch the video](https://i.imgur.com/9ZFToEA.jpg)](https://www.youtube.com/watch?v=CLikuBqQLQw)
+
+---
+
 # PHP Artisan Cheatsheet
 
 ### Here's a list of useful commands to use. This is just a simple sketch of what to do if its your first time trying laravel, or if you forgot something.
@@ -27,6 +47,8 @@ First, when you create a new project, you need to <a href="https://laravel.com/d
 `php artisan migrate:refresh --seed`
 
 If you working with seed, dont forget to check the <i>database/seeds/DatabaseSeeder.php</i> file, you need to tell what you gonna run to 'feed' the DB.
+
+`php artisan make:seeder UsersTableSeeder`
 
 Generating Migrations table:
 
